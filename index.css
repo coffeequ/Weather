@@ -1,0 +1,20 @@
+/* body{
+    border: 2px solid black;
+} */
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-src-place{
+    font-size: 16px;
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+
