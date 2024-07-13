@@ -6,14 +6,24 @@
     <meta name="author" content="Пугач (Coffeequ) Савва">
     <meta name = "description" content="Пет - проект. Погода">
     <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Погода</title>
 </head>
 <body>
     <main>
         <div class="nav">
-            <input class="nav-src-place" placeholder="Введите наименование города...">
-            <!-- <button class="nav-btn">🔎</button> -->
+            <input type="text" id="searchData" class="nav-src-place" placeholder="Введите наименование города..." required>
+            <button id="btnSearch">Найти</button>
+        </div>
+        <div class="weather-data">
+            <div class="weather-data-image">
+                <p id="weather-image"></p>
+            </div>
+            <div class="weather-data-text">
+                <h2 id="cityName"></h2>
+                <p id="temperature"></p>
+                <p id="description"></p>
+            </div>
         </div>
     </main>
 </body>

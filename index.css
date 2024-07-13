@@ -1,20 +1,38 @@
-/* body{
-    border: 2px solid black;
-} */
-
 
 .nav{
     display: flex;
-    justify-content: center;
+    margin: 10px;
 }
 
 .nav-src-place{
     font-size: 16px;
-    width: 95%;
-    margin: 10px;
+    width: 100%;
     padding: 10px;
-    border-radius: 30px;
-    border: 1px solid black;
+    color: black;
 }
 
+.nav-src-place:focus{
+    color: grey;
+    padding: 10px;
+}
+
+.weather-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.weather-data-image{
+    margin: 0px 10px 10px 10px;
+    width: 240px;
+    height: 240px;
+    font-size: 128px;
+}
+
+.weather-data-text{
+    font-size: 18px;
+    text-wrap: wrap;
+}
 
