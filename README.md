@@ -1,3 +1,3 @@
 # Проект для просмотра погоды
 
-API для просмотра погоды https://openweathermap.org/
+В проекте испльзовался API для просмотра погоды: https://openweathermap.org/
