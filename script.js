@@ -1,6 +1,4 @@
 
-const btn = document.getElementById("btnSearch");
-
 const mp = new Map();
 
 mp.set("Clouds", "☁");
@@ -10,13 +8,7 @@ mp.set("Snow", "🌨");
 mp.set("Drizzle", "🌦")
 mp.set("Thunderstorm", "⛈");
 
-
-btn.addEventListener("click", (e) =>{
-    e.preventDefault();
-    const city = document.getElementById("searchData").value;
-    GetWeatherApi(city);
-});
-
+const btn = document.getElementById("btnSearch");
 
 async function GetWeatherApi(city){
 
@@ -36,21 +28,31 @@ async function GetWeatherApi(city){
 
             let data = await response.json();
 
-            console.log(data);
+            document.getElementById("cityName").textContent = data.name + " " + data.sys.country;
 
-            document.getElementById("cityName").textContent = data.name;
+            document.getElementById("pressure").textContent = `Давление, мм рт. ст.: ${data.main.pressure}`
 
             document.getElementById("temperature").textContent = `Температура составит: ${data.main.temp} C`;
 
             document.getElementById("description").textContent = `Описание: ${data.weather[0].description}`;
 
             document.getElementById("weather-image").textContent = mp.get(data.weather[0].main);
+
+            document.getElementById("humidity").textContent = `Влажность: ${data.main.humidity} %`;
         }
 
     } catch (error) {
         console.log(error);
     }
 }
+
+btn.addEventListener("click", (e) =>{
+    e.preventDefault();
+    const city = document.getElementById("searchData").value;
+    GetWeatherApi(city);
+});
+
+
 
 
 
